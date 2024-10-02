@@ -5,6 +5,8 @@ import Hero from './components/Hero';
 import About from './components/About';
 import { Helmet } from 'react-helmet';
 import Aos from 'aos';
+import Testimonial from './components/Testimonial';
+import Projects from './components/Projects';
 
 
 
@@ -24,7 +26,8 @@ const App = () => {
       <Header />
       <Hero />
       <About />
-     
+      <Projects />
+      <Testimonial />
     </div>
     </>
   )
