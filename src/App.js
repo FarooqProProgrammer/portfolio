@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import '@fontsource-variable/oswald';
+import React, { useEffect } from 'react'
+import Header from './components/Header'
+import Hero from './components/Hero';
+import About from './components/About';
+import { Helmet } from 'react-helmet';
+import Aos from 'aos';
 
-function App() {
+
+
+const App = () => {
+
+  useEffect(()=>{
+    Aos.init()
+  },[])
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <>
+    <Helmet>
+      <title>PORTFOLIO | FAROOQ</title>  
+    </Helmet>    
+    <div>
+      <Header />
+      <Hero />
+      <About />
+     
     </div>
-  );
+    </>
+  )
 }
 
-export default App;
+export default App

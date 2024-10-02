@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face {
+    font-family: 'Poppins', sans-serif;
+    src: url('../fonts/Poppins/Poppins-Regular.ttf');
+}
+
+
+
+body {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    background: black;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+}
+
+.Oswald {
+    font-family: 'Oswald Variable', sans-serif
+}
+
+::-webkit-scrollbar { 
+    width: 0px;
+    height: 0px;
+}
+
+.wave-text span  {
+    @apply  text-white;
+}
+
+.animated-button {
+    position: relative;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-family: 'Oswald', sans-serif;
+    color: white; 
+    cursor: pointer;
+    overflow: hidden;
+    background-color: transparent;
+    transition: color 0.5s ease; 
+}
+
+.animated-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0; 
+    width: 100%;
+    height: 100%;
+    background-color: white; /* Background color on hover */
+    transform: translateX(-100%); 
+    transition: transform 0.5s ease; 
+    z-index: -1; 
+}
+
+.animated-button:hover {
+    color: black; /* Change text color to black on hover */
+}
+
+.animated-button:hover::before {
+    transform: translateX(0);
+}
