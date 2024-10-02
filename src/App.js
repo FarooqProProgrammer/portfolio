@@ -7,6 +7,8 @@ import { Helmet } from 'react-helmet';
 import Aos from 'aos';
 import Testimonial from './components/Testimonial';
 import Projects from './components/Projects';
+import Blog from './components/Blog';
+import Contact from './components/Contact';
 
 
 
@@ -28,6 +30,8 @@ const App = () => {
       <About />
       <Projects />
       <Testimonial />
+      <Blog />
+      <Contact />
     </div>
     </>
   )
